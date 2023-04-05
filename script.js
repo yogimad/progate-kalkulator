@@ -10,13 +10,7 @@ let prevNumber = ''
 let calculatorOprator = ''
 let currentNumber = '0'
 
-const inputNumber = (number) =>{
-    if (currentNumber === '0') {
-        currentNumber = number
-    } else {
-        currentNumber += number
-    }
-}
+
 
 const numbers = document.querySelectorAll(".number")
 
@@ -26,7 +20,13 @@ numbers.forEach((number) => {
         updateScreen(currentNumber)
     })
 })
-
+const inputNumber = (number) =>{
+    if (currentNumber === '0') {
+        currentNumber = number
+    } else {
+        currentNumber += number
+    }
+}
 // operator
 const inputOprator = (operator) => {
     if( calculatorOprator === ''){
